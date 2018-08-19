@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -f ci/Dockerfile -t mfc-cli-ci .
+  - docker run mfc-cli-ci /opt/ci/run-tests-in-docker.sh

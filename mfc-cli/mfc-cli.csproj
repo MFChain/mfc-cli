@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Copyright>2016-2018 The Neo Project</Copyright>
+    <AssemblyTitle>MFC.CLI</AssemblyTitle>
+    <Version>2.7.6.1</Version>
+    <Authors>MFChain Team</Authors>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>mfc-cli</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>MFC.CLI</PackageId>
+    <RootNamespace>MFC</RootNamespace>
+    <Company>The MFChain Project</Company>
+    <Product>MFC.CLI</Product>
+    <Description>MFC.CLI</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>False</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="config.json;config.mainnet.json;config.testnet.json;protocol.json;protocol.mainnet.json;protocol.testnet.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mfc" Version="2.7.6.1" />
+  </ItemGroup>
+
+</Project>
